@@ -6,8 +6,8 @@
 /*  external argument must be provided using it       */
 /* -------------------------------------------------- */
 (function() {
-
-  const injectionContext = this || window || {browser: null};
+ try {window} catch {var window: any;};
+  const injectionContext = this || {browser: null};
 
   (function() {
     `<%= polyfillSource %>`;
